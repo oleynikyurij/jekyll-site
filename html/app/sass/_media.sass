@@ -19,6 +19,21 @@
 		&-content 
 			padding: 40px 30px
 
+	.second-section, .third-section 
+		padding: $gutter/2 0
+
+	.third-section 
+		padding: $gutter 0 30px
+		> div > div > div:last-of-type
+			.col-item
+				border-bottom: 0
+				margin-bottom: 0
+				padding-bottom: 0
+
+				
+
+		 
+			
 	 		
 // ≥768px
 +media-breakpoint-down(sm)
@@ -28,6 +43,7 @@
 
 	.first-section 
 		padding-top: $gutter/2
+		padding-bottom: $gutter/2
 
 	.top-ad 
 		margin-bottom: $gutter/2		 
@@ -35,6 +51,24 @@
 	.no-gutters
 		.pattern 
 			margin-bottom: $gutter/2
+	.item-news 		
+		margin: $gutter/2 0 0 
+
+	.col-item 
+		margin-bottom: $gutter/2
+		padding-bottom: $gutter
+		border-bottom: 1px solid rgba(#fff, 0.05)	
+		&-meta, h4 
+			padding: 0 $gutter
+		a 
+			img 
+				margin-bottom: $gutter/2
+
+	.type-one
+		.pattern
+			margin-bottom: $gutter/2
+			
+
 
 // ≥576px
 +media-breakpoint-down(xs)
@@ -48,6 +82,18 @@
 	.search-wrap
 		.search 
 			padding-right: $gutter/2	
+
+	.fourth-section 
+		padding: $gutter/1.5 0
+
+	nav.social 
+		padding: 10px 0 0
+		li 
+			a 
+				width: 40px
+				height: 40px
+				font-size: 18px
+				line-height: 38px			
 
 
 /*==========  Mobile First  ==========*/

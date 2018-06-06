@@ -214,11 +214,11 @@ section
 			font-weight: 800
 			line-height: 1.25
 			font-size: 19px
-		a 
-			color: #ffffff	
-			text-decoration: none
-			&:hover
-			text-decoration: underline
+			a 
+				color: #ffffff	
+				text-decoration: none
+				&:hover
+					text-decoration: underline
 				
 
 // Оверлэй	
@@ -281,6 +281,8 @@ section
 		font-size: 12px
 		display: inline-block
 		position: relative
+		color: #ffffff
+		text-decoration: none
 		&::after
 			content: ''	
 			font-family: fontawesome
@@ -290,6 +292,9 @@ section
 			margin-right: 10px
 			position: absolute
 			opacity: 0.25
+		&:hover
+			color: #ffffff	
+			text-decoration: none
 
 // Likely стилизация	
 .likely-custom
@@ -318,6 +323,269 @@ section
 	> * 
 		display: inline-block		
 
+
+
+// Вторая секция	
+.second-section
+	padding: $gutter/2
+
+.news-wrap 
+	padding-bottom: $gutter/2
+	.pattern
+		&::before
+			display: none
+	.overlay
+		&::before 
+			opacity: 0.4
+
+// Блок новости
+.item-news
+	min-height: 280px
+	margin: $gutter/2 0
+	color: $text-color
+	&-content 
+		border: 
+			left: 1px solid #dfdfdf
+			bottom: 1px solid #dfdfdf
+		position: absolute
+		z-index: 1
+		bottom: 0
+		background-color: #fff
+		width: 80%
+		padding: $gutter/2
+		h3 
+			font-size: 17px
+			line-height: 1.2
+			margin: 0
+	&:hover 
+		h3 
+			text-decoration: underline		
+
+.date 
+	font-size: 13px
+	color: $accent
+	font-family: baron-g, sans-serif
+	font-weight: bold
+
+// правый блок
+.aside-box
+	margin-bottom: $gutter
+	text-align: center
+	.img-responsive
+		display: inline-block
+
+// Третья секция
+.dark-section
+	padding: 30px 0
+	background-color: $dark
+	h2 
+		a 
+			color: #ffffff
+
+.col-item	
+	margin: 12px 0 15px
+	a 
+		text-decoration: none
+		transition: color 0.3s ease
+		&:hover, &.hover
+			text-decoration: underline
+	.item-comments
+		margin-top: 2px
+		.fa, .item-comments-count
+			color: #49505a
+		.fa 
+			font-size: 12px
+			margin: 
+				left: 20px
+				right: 5px
+		a:hover 
+				text-decoration: none					
+		.item-comments-count
+			&::after
+				left: -40px
+				opacity: 1
+				color: #49505a
+		.date 
+			display: inline-block
+			margin-top: 0
+	h4 
+		font-size: 15px
+		font-weight: normal
+		margin: 0
+		line-height: 1.35
+	.col-item-meta
+		margin: 
+			bottom: 8px
+			top: 6px
+	&.col-item-dark
+		a 
+			color: #a4a7ab
+			&:hover, &.hover
+				color: #ffffff	
+
+// Четвёртая секция		
+.fourth-section
+	background-color: #f5f5f5
+	padding: 
+		top: 30px
+	&-header
+		margin-bottom: 10px
+	.item-title
+		min-height: 300px
+		.date 
+			display: inline-block
+			margin-left: 20px
+			color: #ffffff	
+	.item-social
+		margin-top: 1px			
+
+// Пятая секция		
+.type-one
+	&-header
+		margin-bottom: $gutter/2
+	&-first 
+		> div
+			> a 
+				display: block
+				background-color: $dark
+		.item-social 
+			margin-top: 8px
+			a, .item-comments, .date
+				color: #a0a0a0
+								
+			.item-comments-count
+				font-size: 12px
+				color: #a0a0a0
+			.date 
+				display: inline-block
+				margin-left: 20px	
+			.item-comments					
+				h3 
+					font-size: 22px
+					text-transform: uppercase
+					font-weight: 800
+					margin-top: 8px
+					line-height: 1.2
+					margin-bottom: 30px
+					a 
+						color: $text-color
+						display: block
+					&:hover
+						a 
+							color: $accent
+	.pattern 
+		margin-bottom: $gutter						
+
+.item-title-white
+	.date
+		font-size: 13px
+		display: inline-block
+		margin-left: 20px
+		color: #ffffff
+	.item-counts-count 
+		font-size: 12px
+	.item-social
+		margin-top: 0	
+	.item-title
+		min-height: 230px	
+		&-content 
+			padding: 40px 40px 25px	
+
+// Шестая секция	
+.button
+	display: inline-block
+	border: none
+	color: #ffffff
+	text-decoration: none
+	background-color: $accent
+	padding: 12px 40px
+	font-size: 14px
+	text-transform: uppercase
+	font-weight: 600
+	border-radius: 10em
+	text-align: center
+	position: relative
+	outline: none
+	cursor: pointer
+	transition: all 0.2s ease
+	&:hover, &:focus
+		text-decoration: none
+		color: #ffffff 
+	&:hover
+		background-color: lighten($accent, 10%)
+	&:active
+		background-color: darken($accent, 10%)	
+
+.s_more 
+	padding: $gutter*2  0
+	background-color: #f5f5f5
+
+// Футер	
+.main-footer
+	background-color: $dark-blue
+	padding: 25px 0
+	border-bottom: 1px solid rgba(#fff, 0.1)
+
+.bottom-footer
+	background-color: $dark-blue	
+	padding: 25px 0 35px
+	.logo
+		display: inline-block
+	p 
+		color: rgba(#fff, 0.2)
+		font-size: 12px
+		margin: 5px
+	.footer-copy
+		color: rgba(#ffffff, .45)
+		font-size: 13px
+		font-family: baron-g, sans-serif	
+
+.footer-menu
+	li 
+		&.active
+			text-decoration: underline
+			background: none
+			a 
+				background: none
+		a 
+			font-size: 15px
+			padding: 0 10px	
+			&:hover
+				text-decoration: underline
+				background: none
+
+nav.social
+	padding: 15px 0 20px
+	ul, li 
+		margin: 0
+		padding: 0
+		list-style-type: none
+		text-align: center
+	li 
+		display: inline-block
+		a 
+			display: block
+			text-align: center
+			border: 1px solid rgba(#fff, 0.1)
+			border-radius: 10em
+			width: 52px
+			height: 52px
+			line-height: 50px	
+			color: #ffffff
+			font-size: 24px
+			margin: 4px	
+			transition: border-color 0.3s ease, opacity 0.3s ease
+			.fa 
+				transition: opacity 0.3s ease
+				opacity: 0.7
+			&:hover
+				border-color: rgba(#fff, 0.4)
+				.fa 
+					opacity: 1									
+
+.logo-footer
+	span 
+		color: $accent
 
 
 
