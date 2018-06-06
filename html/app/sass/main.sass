@@ -146,7 +146,7 @@ b, strong
 				font-family: Arial, sans-serif
 				font-style: italic
 
-
+// Мобильное меню
 .mobile-menu-button 
 	color: #ffffff
 	text-align: center
@@ -171,6 +171,165 @@ b, strong
 		a 
 			padding: 0
 			line-height: 65px						
+
+// Рекламный блок 
+.ad 
+	text-align: center
+	width: 100%	
+	display: block
+	overflow: hidden
+
+.top-ad
+	margin-bottom: $gutter
+
+.container-fluid
+	max-width: 1346px
+	padding: 0 $gutter
+
+
+// Общие классы для секций	
+section 
+	background-color: #fafafa	
+	padding: 
+		top: $gutter
+		bottom: $gutter
+	h2 
+		text-transform: uppercase
+		margin: 0
+		font-size: 23px
+		font-weight: 800
+
+// Первая секция		
+.item-title
+	min-height: 340px
+	&-content 
+		position: absolute
+		bottom: 0
+		color: #ffffff
+		padding: 40px
+		z-index: 1
+		h3 
+			margin: 0
+			text-transform: uppercase
+			font-weight: 800
+			line-height: 1.25
+			font-size: 19px
+		a 
+			color: #ffffff	
+			text-decoration: none
+			&:hover
+			text-decoration: underline
+				
+
+// Оверлэй	
+.pattern 
+	background-color: $dark
+	position: relative
+	display: block
+	&::before 
+		content: ''
+		transition: opacity 0.3s ease, top 0.3s ease, left 0.3s ease, bottom 0.3s ease, right 0.3s ease
+		z-index: 1
+		position: absolute
+		border: 1px solid #ffffff
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		opacity: 0
+	&:hover
+		&::before 
+			opacity: 0.2
+			top: 10px
+			bottom: 10px
+			right: 10px
+			left: 10px
+		.overlay 
+			&::before
+				opacity: 0.75	
+
+.overlay 				
+	background-size: cover
+	background-position: center
+	position: relative
+	display: block
+	&::before 
+		content: ''
+		background-color: $dark
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		opacity: 0.55
+		transition: opacity 0.3s ease
+	&:hover
+		&::before
+			opacity: 0.75
+
+// Социальные сети				
+.item-social 
+	margin-top: 10px
+	.fa 
+		font-size: 12px
+		margin-right: 5px
+
+.item-comments
+	display: inline-block
+	margin-right: 20px
+	&-count 
+		font-size: 12px
+		display: inline-block
+		position: relative
+		&::after
+			content: ''	
+			font-family: fontawesome
+			font-size: 5px
+			top: 35%
+			margin-left: 10px
+			margin-right: 10px
+			position: absolute
+			opacity: 0.25
+
+// Likely стилизация	
+.likely-custom
+	display: inline-block
+	font-size: 12px
+	.likely__button 
+		padding-left: 15px
+	> div 
+		padding: 0 4px 0 3px
+		position: relative
+		cursor: pointer	
+		margin: 6px 2px 0
+		border: 1px solid #ffffff
+		border-radius: 2px
+		// количество лайкнувших	
+	.likely__counter 
+		display: none	
+	svg 
+		width: 11px
+		height: auto
+		position: absolute
+		top: 3.5px
+		left: 4px
+		path 
+			fill: #ffffff
+	> * 
+		display: inline-block		
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @import "media" // Always at the end
