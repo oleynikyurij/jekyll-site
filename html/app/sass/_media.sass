@@ -8,17 +8,46 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
 	.main-menu 
 		display: none
 		padding: 20px
 	.mobile-menu-button 
 		display: block
+
+	.item-title
+		&-content 
+			padding: 40px 30px
+
+	 		
 // ≥768px
 +media-breakpoint-down(sm)
+
+	.container-fluid 
+		padding: 0 $gutter/2
+
+	.first-section 
+		padding-top: $gutter/2
+
+	.top-ad 
+		margin-bottom: $gutter/2		 
 	
+	.no-gutters
+		.pattern 
+			margin-bottom: $gutter/2
 
 // ≥576px
 +media-breakpoint-down(xs)
+
+	
+
+	.logo 
+		padding-left: $gutter/2
+		font-size: 19px
+
+	.search-wrap
+		.search 
+			padding-right: $gutter/2	
 
 
 /*==========  Mobile First  ==========*/
